@@ -1,0 +1,64 @@
+body {
+  background-color: #1e1e11;
+}
+#menu-toggle {
+  margin: 400px auto;
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+}
+
+#menu-toggle .line-toggle {
+  display: block;
+  height: 5px;
+  background-color: white;
+  margin: 5px 10px;
+  border-radius: 10px;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+#menu-toggle .line-toggle:first-child {
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+#menu-toggle .line-toggle:last-child {
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+
+#menu-toggle.change {
+  -webkit-transform: rotate(360deg) translateX(8px) scale(1.1);
+  transform: rotate(360deg) translateX(8px) scale(1.1);
+}
+
+#menu-toggle.change .line-toggle:first-child {
+  -webkit-transform: rotate(44deg) translateX(-0.6px);
+  transform: rotate(44deg) translateX(-0.6px);
+}
+
+#menu-toggle.change .line-toggle:nth-child(2) {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+}
+
+#menu-toggle.change .line-toggle:last-child {
+  -webkit-transform: rotate(-44deg) translateX(-0.6px);
+  transform: rotate(-44deg) translateX(-0.6px);
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Hamburger Menu</title>
+  </head>
+
+  <body>
+    <div id="menu-toggle">
+      <span class="line-toggle"></span>
+      <span class="line-toggle"></span>
+      <span class="line-toggle"></span>
+    </div>
+
+    <script>
+      const menuToggle = document.querySelector('#menu-toggle');
+      menuToggle.addEventListener('click', function(){
+        this.classList.toggle('change');
+      });
+    </script>
+  </body>
+</html>
