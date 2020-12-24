@@ -1,0 +1,48 @@
+body {
+  background-color: #1e1e1e;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.scroll-icon {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scroll-icon .scroll-body {
+  display: flex;
+  width: 30px;
+  height: 90px;
+  border: 3px solid white;
+  border-radius: 30px;
+}
+.scroll-icon .scroll-body .scroller {
+  width: 20px;
+  height: 40px;
+  margin: 5px auto;
+  background-color: white;
+  border-radius: 20px;
+  animation: scrolling 2s ease-in-out infinite;
+}
+
+.scroll-icon p {
+  margin: auto;
+  color: white;
+  font-family: "Gill Sans", sans-serif;
+  margin-top: 16px;
+  letter-spacing: 4px;
+}
+
+@keyframes scrolling {
+  0% {
+    margin: 5px auto;
+  }
+  40% {
+    margin: 45px auto;
+  }
+  100% {
+    margin: 5px auto;
+  }
+}
