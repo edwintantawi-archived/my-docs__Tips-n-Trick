@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>On scroll Animation</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+    <div class="box" data-show="fade-up"></div>
+  </div>
+
+
+  <script>
+    const items = document.querySelectorAll('[data-show]');
+
+    document.addEventListener('DOMContentLoaded', e => animate(items));
+    document.addEventListener('scroll', e => animate(items));
+
+    const animate = items => {
+      items.forEach(item => {
+          const itemPos = item.getBoundingClientRect();
+          const calculateItemPos = itemPos.y - 50;
+
+          if ( calculateItemPos <=  window.innerHeight ){
+            item.classList.add('on-show');
+          } else {
+            item.classList.remove('on-show');
+          }
+        });
+    }
+  </script>
+
+  
+</body>
+</html>

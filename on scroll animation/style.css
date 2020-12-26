@@ -1,0 +1,28 @@
+body {
+  background-color: #1e1e1e;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  margin: 100px auto 0;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .box {
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  margin: 10px 0;
+}
+
+.container .box[data-show="fade-up"] {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1000ms;
+}
+.container .box[data-show="fade-up"].on-show {
+  transform: translateY(0);
+  opacity: 1;
+}
